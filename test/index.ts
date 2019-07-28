@@ -1,4 +1,4 @@
-
+import { fold } from 'fp-ts/lib/Either';
 import * as io from 'io-ts';
 import { Feature, FeatureCollectionIO, FeatureIO, PartialFeatureIO } from '../src';
 
@@ -157,37 +157,37 @@ export const myFeatureGood: MFT = {
     },
 };
 
-
 const good = (msg: string) => () => console.log(`GOOD ${msg}`);
 const bad = (msg: string) => () => { throw (new Error(`BAD ${msg}`)); };
 
-FeatureCollectionIO.decode(geojsonLine).fold(
+
+fold(
     bad('Line did not validate but it should'),
     good('geojsonLine validates as it should'),
-);
+)(FeatureCollectionIO.decode(geojsonLine));
 
-FeatureCollectionIO.decode(geojsonMissingProperties).fold(
+fold(
     good('geojsonMissingProperties fails to validate as it should'),
     bad('missingProperties should not validate but it did'),
-);
+)(FeatureCollectionIO.decode(geojsonMissingProperties));
 
-FeatureIO.decode(featureGood).fold(
+fold(
     bad('featureGood should validate'),
     good('featureGood validates as it should'),
-);
+)(FeatureIO.decode(featureGood));
 
-FeatureIO.decode(featureBad).fold(
+fold(
     good('featureBad fails to validate as it should'),
     bad('featureBad should not validate'),
-);
+)(FeatureIO.decode(featureBad));
 
-MyFeatureType.decode(myFeatureGood).fold(
+fold(
     bad('myFeatureGood should validate'),
     good('myFeatureGood validates as it should'),
-);
+)(MyFeatureType.decode(myFeatureGood));
 
-MyFeatureType.decode(myFeatureBad).fold(
+fold(
     good('myFeatureBad fails to validate as it should'),
     bad('myFeatureBad should not validate'),
-);
+)(MyFeatureType.decode(myFeatureBad));
 

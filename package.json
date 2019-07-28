@@ -1,12 +1,15 @@
 {
-  "name": "geojson-iots",
-  "version": "1.0.6",
+  "name": "@holvonix-misc/geojson-iots",
+  "version": "2.0.0",
   "description": "Runtime types for GeoJSON",
   "main": "out/src/index.js",
   "typings": "out/src/index.d.ts",
   "files": [
-    "out/src"
+    "out/src",
+    "LICENSE",
+    "README.md"
   ],
+  "private": false,
   "scripts": {
     "lint": "tslint --project tsconfig.json --type-check",
     "build": "rm -rf out && tsc",
@@ -15,21 +18,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pierremarc/geojson-iots.git"
+    "url": "git+https://github.com/holvonix-misc/geojson-iots.git"
   },
   "keywords": [
     "io-ts",
     "typescript",
     "geojson"
   ],
-  "author": "Pierre Marchand <pierre.m@atelier-cartographique.be>",
+  "author": "Holvonix LLC <sourcecode@holvonix.com> and Pierre Marchand <pierre.m@atelier-cartographique.be>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pierremarc/geojson-iots/issues"
+    "url": "https://github.com/holvonix-misc/geojson-iots/issues"
   },
-  "homepage": "https://github.com/pierremarc/geojson-iots#readme",
+  "homepage": "https://github.com/holvonix-misc/geojson-iots#readme",
   "dependencies": {
-    "io-ts": "^1.3.1"
+    "fp-ts": "^2.0.0",
+    "io-ts": "^2.0.0"
   },
   "devDependencies": {
     "tslint": "^5.7.0",

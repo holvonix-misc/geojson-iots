@@ -4,14 +4,14 @@ Runtime types for GeoJSON as defined in [rfc7946](https://tools.ietf.org/html/rf
 ## install
 
 ```
-npm install geojson-iots
+npm install @holvonix-misc/geojson-iots
 ```
 
 ## use
 
 ```ts
 import * as io from 'io-ts';
-import {FeatureCollectionIO, FeatureCollection} from 'geojson-iots';
+import {FeatureCollectionIO, FeatureCollection} from '@holvonix-misc/geojson-iots';
 
 const failure = () => {throw (new Error('Failed'));};
 const success = <T>(a:T) => a;
