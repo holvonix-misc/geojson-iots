@@ -38,10 +38,10 @@ export const GeoJsonTypeIO = u([
 /**
  * https://tools.ietf.org/html/rfc7946#section-5
  * 
- * I leave it un-done for the moment as I won't use it here.
- * Would need specific validate
+ * This should really be either 4- or 8-tuple of numbers.
+ * But io-ts doesn't support that.
  */
-export const BoundingBoxIO = u([a(a(io.number)), a(a(a(io.number)))], 'BoundingBoxIO');
+export const BoundingBoxIO = a(io.number, 'BoundingBoxIO');
 
 
 /***
