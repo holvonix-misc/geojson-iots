@@ -68,20 +68,6 @@ export const CoordinatesIO = u([
     a(a(a(PositionIO))),
 ], 'CoordinatesIO');
 
-/***
-* https://tools.ietf.org/html/rfc7946#section-3.1
-*/
-export const DirectGeometryObjectIO = io.intersection([
-    i({
-        type: DirectGeometryTypeIO,
-        coordinates: CoordinatesIO,
-    }),
-    p({
-        bbox: BoundingBoxIO,
-    }),
-], 'DirectGeometryObjectIO');
-
-
 
 /***
 * https://tools.ietf.org/html/rfc7946#section-3.1.2
@@ -160,6 +146,13 @@ export const MultiPolygonIO = io.intersection([
         bbox: BoundingBoxIO,
     }),
 ], 'MultiPolygonIO');
+
+/***
+* https://tools.ietf.org/html/rfc7946#section-3.1
+*/
+export const DirectGeometryObjectIO = io.union([
+    PointIO, MultiPointIO, LineStringIO, MultiLineStringIO, PolygonIO, MultiPolygonIO,
+], 'DirectGeometryObjectIO');
 
 /***
 * https://tools.ietf.org/html/rfc7946#section-3.1.8
