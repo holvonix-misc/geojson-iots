@@ -58,8 +58,12 @@ export const GeoJsonObjectIO = io.intersection([
 
 /***
 * https://tools.ietf.org/html/rfc7946#section-3.1.1
+* however we accept only 2 and 3 coordinates.
 */
-export const PositionIO = a(io.number, 'PositionIO');
+export const PositionIO = io.union([
+    t([io.number,io.number,io.number]),
+    t([io.number,io.number])],
+    'PositionIO');
 
 export const CoordinatesIO = u([
     PositionIO,
