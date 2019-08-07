@@ -1,6 +1,6 @@
 {
   "name": "@holvonix-misc/geojson-iots",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Runtime types for GeoJSON",
   "main": "out/src/index.js",
   "typings": "out/src/index.d.ts",
@@ -31,11 +31,13 @@
     "url": "https://github.com/holvonix-misc/geojson-iots/issues"
   },
   "homepage": "https://github.com/holvonix-misc/geojson-iots#readme",
-  "dependencies": {
-    "fp-ts": "^2.0.0",
-    "io-ts": "^2.0.0"
+  "peerDependencies": {
+    "fp-ts": "^2.0.4",
+    "io-ts": "^2.0.1"
   },
   "devDependencies": {
+    "fp-ts": "^2.0.4",
+    "io-ts": "^2.0.1",
     "tslint": "^5.7.0",
     "typescript": "^3.1.3"
   }
