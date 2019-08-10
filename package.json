@@ -1,7 +1,7 @@
 {
-  "name": "@holvonix-misc/geojson-iots",
-  "version": "3.0.1",
-  "description": "Runtime types for GeoJSON",
+  "name": "@holvonix-open/geojson-io-ts",
+  "version": "4.0.0",
+  "description": "Runtime types for GeoJSON (limited to 2-dimensional coordinates)",
   "main": "out/src/index.js",
   "typings": "out/src/index.d.ts",
   "files": [
@@ -16,9 +16,10 @@
     "test": "npm run lint && npm run build && node out/test/index.js",
     "prepublishOnly": "npm run lint && npm run build"
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holvonix-misc/geojson-iots.git"
+    "url": "git+https://github.com/holvonix-open/geojson-io-ts.git"
   },
   "keywords": [
     "io-ts",
@@ -28,9 +29,9 @@
   "author": "Holvonix LLC <sourcecode@holvonix.com> and Pierre Marchand <pierre.m@atelier-cartographique.be>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/holvonix-misc/geojson-iots/issues"
+    "url": "https://github.com/holvonix-open/geojson-io-ts/issues"
   },
-  "homepage": "https://github.com/holvonix-misc/geojson-iots#readme",
+  "homepage": "https://github.com/holvonix-open/geojson-io-ts#readme",
   "peerDependencies": {
     "fp-ts": "^2.0.4",
     "io-ts": "^2.0.1"
