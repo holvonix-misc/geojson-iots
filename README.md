@@ -1,17 +1,21 @@
-# geojson-iots
-Runtime types for GeoJSON as defined in [rfc7946](https://tools.ietf.org/html/rfc7946) made with [io-ts](https://github.com/gcanti/io-ts).
+# geojson-io-ts
+Runtime types for GeoJSON as defined in [rfc7946](https://tools.ietf.org/html/rfc7946) made with [io-ts](https://github.com/gcanti/io-ts), but with positions limited to 2 dimensions.
+
+Forked from https://github.com/pierremarc/geojson-iots .  This fork:
+- limits positions to 2 dimensions
+- makes the geometry codecs unions of the underlying types, allowing us to validate the dimensionality of coordinates arrays against the geometry type
 
 ## install
 
 ```
-npm install @holvonix-misc/geojson-iots
+npm install @holvonix-open/geojson-io-ts
 ```
 
 ## use
 
 ```ts
 import * as io from 'io-ts';
-import {FeatureCollectionIO, FeatureCollection} from '@holvonix-misc/geojson-iots';
+import {FeatureCollectionIO, FeatureCollection} from '@holvonix-open/geojson-io-ts';
 
 const failure = () => {throw (new Error('Failed'));};
 const success = <T>(a:T) => a;
