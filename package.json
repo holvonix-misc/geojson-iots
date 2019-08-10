@@ -1,6 +1,6 @@
 {
   "name": "@holvonix-open/geojson-io-ts",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Runtime types for GeoJSON (limited to 2-dimensional coordinates)",
   "main": "out/src/index.js",
   "typings": "out/src/index.d.ts",
@@ -10,6 +10,9 @@
     "README.md"
   ],
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "tslint --project tsconfig.json --type-check",
     "build": "rm -rf out && tsc",
