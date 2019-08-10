@@ -1,10 +1,12 @@
 // tslint:disable:variable-name
 import * as io from 'io-ts';
+import { nonEmptyArray } from 'io-ts-types/lib/nonEmptyArray';
 
 export const i = io.interface;
 export const u = io.union;
 export const l = io.literal;
 export const a = io.array;
+export const nea = nonEmptyArray;
 export const t = io.tuple;
 export const p = io.partial;
 
@@ -115,7 +117,7 @@ export const LineStringIO = io.intersection([
 export const MultiLineStringIO = io.intersection([
     i({
         type: l('MultiLineString'),
-        coordinates: a(a(PositionIO)),
+        coordinates: a(nea(PositionIO)),
     }),
     p({
         bbox: BoundingBoxIO,
@@ -128,7 +130,7 @@ export const MultiLineStringIO = io.intersection([
 export const PolygonIO = io.intersection([
     i({
         type: l('Polygon'),
-        coordinates: a(a(PositionIO)),
+        coordinates: nea(nea(PositionIO)),
     }),
     p({
         bbox: BoundingBoxIO,
@@ -141,7 +143,7 @@ export const PolygonIO = io.intersection([
 export const MultiPolygonIO = io.intersection([
     i({
         type: l('MultiPolygon'),
-        coordinates: a(a(a(PositionIO))),
+        coordinates: a(nea(nea(PositionIO))),
     }),
     p({
         bbox: BoundingBoxIO,

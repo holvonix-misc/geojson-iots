@@ -1,7 +1,7 @@
 {
   "name": "@holvonix-open/geojson-io-ts",
-  "version": "4.0.2",
-  "description": "Runtime types for GeoJSON (limited to 2-dimensional coordinates)",
+  "version": "5.0.0",
+  "description": "Runtime types for GeoJSON (limited to 2-dimensional positions)",
   "main": "out/src/index.js",
   "typings": "out/src/index.d.ts",
   "files": [
@@ -37,11 +37,15 @@
   "homepage": "https://github.com/holvonix-open/geojson-io-ts#readme",
   "peerDependencies": {
     "fp-ts": "^2.0.4",
-    "io-ts": "^2.0.1"
+    "io-ts": "^2.0.1",
+    "io-ts-types": "^0.5.0",
+    "monocle-ts": "^2.0.0"
   },
   "devDependencies": {
     "fp-ts": "^2.0.4",
     "io-ts": "^2.0.1",
+    "io-ts-types": "^0.5.0",
+    "monocle-ts": "^2.0.0",
     "tslint": "^5.7.0",
     "typescript": "^3.1.3"
   }
