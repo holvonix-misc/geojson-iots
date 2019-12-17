@@ -101,10 +101,10 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
   integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
 
-fp-ts@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.0.4.tgz#a07ceef59c2460616fcf70367708ebe4d1c2212f"
-  integrity sha512-oRQbFqqGcvorkEj92dAcM4/RH1TARJCt8wVgynRIp8v4uOzVCe4kCs7vKSYpIXQsvtpyCt9nVVFqufSX8VYghg==
+fp-ts@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.3.1.tgz#8068bfcca118227932941101e062134d7ecd9119"
+  integrity sha512-KevPBnYt0aaJiuUzmU9YIxjrhC9AgJ8CLtLlXmwArovlNTeYM5NtEoKd86B0wHd7FIbzeE8sNXzCoYIOr7e6Iw==
 
 fs.realpath@^1.0.0:
   version "1.0.0"
