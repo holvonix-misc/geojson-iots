@@ -44,7 +44,7 @@
   "devDependencies": {
     "fp-ts": "^2.0.4",
     "io-ts": "^2.0.1",
-    "io-ts-types": "^0.5.0",
+    "io-ts-types": "^0.5.3",
     "monocle-ts": "^2.0.0",
     "tslint": "^5.7.0",
     "typescript": "^3.1.3"
